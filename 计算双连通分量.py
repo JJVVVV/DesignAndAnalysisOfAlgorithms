@@ -14,5 +14,9 @@ if __name__ == '__main__':
     for i in range(len(filepath)):
         G = ALGraph(vexnum[i], filepath=filepath[i])
         G.create()
+        for i in range(G.vexnum):
+            G.vertexes[i].data = chr(ord('a') + i)
         ret = G.biconnectedComponent(0)
-        print(ret)
+        print(len(ret))
+        for component in ret:
+            print(list(map(lambda item: G.vertexes[item[0]].data + G.vertexes[item[1]].data, component)))
