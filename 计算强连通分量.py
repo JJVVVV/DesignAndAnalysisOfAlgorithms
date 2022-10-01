@@ -18,7 +18,7 @@ if __name__ == '__main__':
                 './data/problem8.10test3.txt', './data/problem8.10test4.txt',
                 './data/problem8.10test5.txt', './data/problem8.10.txt']
     vexnum = [9, 8, 8, 8, 12, 875714]
-    for i in range(0, 5):
+    for i in range(5):
         G = ALGraph(vexnum[i], filepath=filepath[i])
         G.create()
         scc = G.kasaraju()
