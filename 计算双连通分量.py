@@ -9,8 +9,8 @@
 from ALGraph import ALGraph
 
 if __name__ == '__main__':
-    filepath = ['./data/test1.txt']
-    vexnum = [16]
+    filepath = ['./data/test1.txt', './data/test2.txt']
+    vexnum = [16, 12]
     for i in range(len(filepath)):
         G = ALGraph(vexnum[i], filepath=filepath[i])
         G.create()

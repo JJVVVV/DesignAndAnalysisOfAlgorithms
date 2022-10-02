@@ -12,5 +12,11 @@ def print_hi(name):
 # 按间距中的绿色按钮以运行脚本。
 if __name__ == '__main__':
     print_hi('PyCharm')
-
+    with open("./data/test2.txt", 'r', encoding='utf8') as f:
+        lines = f.readlines()
+        lines = list(map(lambda item: (str(int(item.split()[0])+1), str(int(item.split()[1])+1)), lines))
+        lines = list(map(lambda item: ' '.join(item)+'\n', lines))
+        print(lines)
+    with open('data/test2.txt', 'w', encoding='utf8') as f:
+        f.writelines(lines)
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助
