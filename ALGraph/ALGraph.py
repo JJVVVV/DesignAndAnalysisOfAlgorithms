@@ -50,7 +50,10 @@ class ALGraph:
                 arcPtr = arcPtr.next
         return G_T
 
-    def topoSort(self) -> tuple[list, list]:
+    def topoSort(self) -> list:
+        """
+        返回拓扑排序的逆序
+        """
         curLable = self.vexnum
         # f = [0] * self.vexnum
         stk = []
@@ -77,7 +80,6 @@ class ALGraph:
 
     def kasaraju(self):
         G_T = self.createReverseGraph()
-        # f, stk = G_T.topoSort()
         stk = G_T.topoSort()
         visited = [False] * self.vexnum
         numSCC = 0
