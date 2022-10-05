@@ -12,7 +12,7 @@ from collections import Counter
 
 from ALGraph import ALGraph
 
-sys.setrecursionlimit(1000000)  # 例如这里设置为一百万
+sys.setrecursionlimit(100000)  # 例如这里设置为一百万
 if __name__ == '__main__':
     filepath = ['./data/problem8.10test1.txt', './data/problem8.10test2.txt',
                 './data/problem8.10test3.txt', './data/problem8.10test4.txt',

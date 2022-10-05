@@ -11,7 +11,7 @@ import sys
 
 from ALGraph import ALGraph, ArcNode
 
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(100000)
 
 
 def test():
